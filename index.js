@@ -31,10 +31,10 @@ function deleteFromObjectByKey(recipes, key){
 deleteFromObjectByKey(recipes, "vanilla");
 console.log(deleteFromObjectByKey());
 
-function deleteFromObjectByKey(recipes, key){
+function destructivelyDeleteFromObjectByKey(recipes, key){
   delete recipes[key];
   return recipes;
 }
 
-deleteFromObjectByKey(recipes, "vanilla");
-console.log(deleteFromObjectByKey());
+destructivelyDeleteFromObjectByKey(recipes, "vanilla");
+console.log(destructivelyDeleteFromObjectByKey());
