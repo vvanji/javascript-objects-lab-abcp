@@ -32,9 +32,8 @@ deleteFromObjectByKey(recipes, "vanilla");
 console.log(deleteFromObjectByKey());
 
 function deleteFromObjectByKey(recipes, key){
-  const newRecipes = Object.assign({}, recipes);
-  delete newRecipes[key];
-  return newRecipes;
+  delete recipes[key];
+  return recipes;
 }
 
 deleteFromObjectByKey(recipes, "vanilla");
