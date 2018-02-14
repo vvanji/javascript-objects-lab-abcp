@@ -1,0 +1,30 @@
+const recipes = {
+  eggs: "2 pieces",
+  flour: "2 cups",
+  milk: "1 cup"
+  
+};
+
+
+function updateObjectWithKeyAndValue(recipes, key, value){
+  return Object.assign({}, recipes, {[key]: value});
+}
+
+updateObjectWithKeyAndValue(recipes, "vanilla", "1 tsp");
+console.log(updateObjectWithKeyAndValue(recipes, "vanilla", "1 tsp"));
+
+
+function destructivelyUpdateObjectWithKeyAndValue(recipes, key, value){
+  return Object.assign(recipes, {[key]: value});
+}
+
+destructivelyUpdateObjectWithKeyAndValue(recipes, "vanilla", "1 tsp");
+console.log(destructivelyUpdateObjectWithKeyAndValue(recipes, "vanilla", "1 tsp"));
+
+
+function deleteFromObjectByKey(recipes, key){
+  return Object.assign(recipes, {[key]: key});
+}
+
+deleteFromObjectByKey(recipes, "vanilla");
+console.log(deleteFromObjectByKey());
